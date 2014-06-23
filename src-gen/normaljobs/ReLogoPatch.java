@@ -292,5 +292,26 @@ public class ReLogoPatch extends BasePatch{
 		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("numWorkers",value);
 	}
 
+	/**
+	 * Returns the value of the global variable numJobs.
+	 *
+	 * @return the value of the global variable numJobs
+	 */
+	@ReLogoBuilderGeneratedFor("global: numJobs")
+	public Object getNumJobs(){
+		return repast.simphony.relogo.ReLogoModel.getInstance().getModelParam("numJobs");
+	}
+
+	/**
+	 * Sets the value of the global variable numJobs.
+	 *
+	 * @param value
+	 *            a value
+	 */
+	@ReLogoBuilderGeneratedFor("global: numJobs")
+	public void setNumJobs(Object value){
+		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("numJobs",value);
+	}
+
 
 }

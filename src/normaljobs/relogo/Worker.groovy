@@ -12,7 +12,20 @@ import normaljobs.ReLogoTurtle;
 
 class Worker extends ReLogoTurtle{
 	
+	Job job = null
+	def increment = 1
+	
 	def step(){
-		
+		if (this.job && job.numRequirements > job.completionLevel){
+			job.completionLevel += increment
+		}
 	}
+	
+	def isJobDone(){
+		// check out http://groovy.codehaus.org/Operators#Operators-ElvisOperator(?:)
+		return job?.numRequirements > job?.completionLevel 
+	}
+	
+	
+	
 }
