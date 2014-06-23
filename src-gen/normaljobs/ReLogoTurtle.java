@@ -18,145 +18,145 @@ import repast.simphony.space.grid.GridPoint;
 public class ReLogoTurtle extends BaseTurtle{
 
 	/**
-	 * Makes a number of new userTurtles and then executes a set of commands on the
-	 * created userTurtles.
+	 * Makes a number of new workers and then executes a set of commands on the
+	 * created workers.
 	 * 
 	 * @param number
 	 *            a number
 	 * @param closure
 	 *            a set of commands
-	 * @return created userTurtles
+	 * @return created workers
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public AgentSet<normaljobs.relogo.UserTurtle> hatchUserTurtles(int number, Closure closure) {
-		AgentSet<normaljobs.relogo.UserTurtle> result = new AgentSet<>();
-		AgentSet<Turtle> createResult = this.hatch(number,closure,"UserTurtle");
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public AgentSet<normaljobs.relogo.Worker> hatchWorkers(int number, Closure closure) {
+		AgentSet<normaljobs.relogo.Worker> result = new AgentSet<>();
+		AgentSet<Turtle> createResult = this.hatch(number,closure,"Worker");
 		for (Turtle t : createResult){
-			if (t instanceof normaljobs.relogo.UserTurtle){
-				result.add((normaljobs.relogo.UserTurtle)t);
+			if (t instanceof normaljobs.relogo.Worker){
+				result.add((normaljobs.relogo.Worker)t);
 			}
 		} 
 		return result;
 	}
 
 	/**
-	 * Makes a number of new userTurtles and then executes a set of commands on the
-	 * created userTurtles.
+	 * Makes a number of new workers and then executes a set of commands on the
+	 * created workers.
 	 * 
 	 * @param number
 	 *            a number
 	 * @param closure
 	 *            a set of commands
-	 * @return created userTurtles
+	 * @return created workers
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public AgentSet<normaljobs.relogo.UserTurtle> hatchUserTurtles(int number) {
-		return hatchUserTurtles(number,null);
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public AgentSet<normaljobs.relogo.Worker> hatchWorkers(int number) {
+		return hatchWorkers(number,null);
 	}
 
 	/**
-	 * Returns an agentset of userTurtles from the patch of the caller.
+	 * Returns an agentset of workers from the patch of the caller.
 	 * 
-	 * @return agentset of userTurtles from the caller's patch
+	 * @return agentset of workers from the caller's patch
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public AgentSet<normaljobs.relogo.UserTurtle> userTurtlesHere(){
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public AgentSet<normaljobs.relogo.Worker> workersHere(){
 	  Grid grid = getMyObserver().getGrid();
 	  GridPoint gridPoint = grid.getLocation(this);
-	  AgentSet<normaljobs.relogo.UserTurtle> result = new AgentSet<normaljobs.relogo.UserTurtle>();
-	  for (Turtle t : Utility.getTurtlesOnGridPoint(gridPoint,getMyObserver(),"userTurtle")){
-			if (t instanceof normaljobs.relogo.UserTurtle)
-			result.add((normaljobs.relogo.UserTurtle)t);
+	  AgentSet<normaljobs.relogo.Worker> result = new AgentSet<normaljobs.relogo.Worker>();
+	  for (Turtle t : Utility.getTurtlesOnGridPoint(gridPoint,getMyObserver(),"worker")){
+			if (t instanceof normaljobs.relogo.Worker)
+			result.add((normaljobs.relogo.Worker)t);
 		}
 		return result;
 	}
 
 	/**
-	 * Returns the agentset of userTurtles on the patch at the direction (ndx, ndy) from the
+	 * Returns the agentset of workers on the patch at the direction (ndx, ndy) from the
 	 * caller.
 	 * 
 	 * @param nX
 	 *            a number
 	 * @param nY
 	 *            a number
-	 * @returns agentset of userTurtles at the direction (nX, nY) from the caller
+	 * @returns agentset of workers at the direction (nX, nY) from the caller
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public AgentSet<normaljobs.relogo.UserTurtle> userTurtlesAt(Number nX, Number nY){
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public AgentSet<normaljobs.relogo.Worker> workersAt(Number nX, Number nY){
 		double dx = nX.doubleValue();
 		double dy = nY.doubleValue();
 		double[] displacement = {dx,dy};
 
 		try{
 		GridPoint gridPoint = Utility.getGridPointAtDisplacement(getTurtleLocation(),displacement,getMyObserver());
-		AgentSet<normaljobs.relogo.UserTurtle> result = new AgentSet<normaljobs.relogo.UserTurtle>();						
-		for (Turtle t : Utility.getTurtlesOnGridPoint(gridPoint,getMyObserver(),"userTurtle")){
-			if (t instanceof normaljobs.relogo.UserTurtle)
-			result.add((normaljobs.relogo.UserTurtle)t);
+		AgentSet<normaljobs.relogo.Worker> result = new AgentSet<normaljobs.relogo.Worker>();						
+		for (Turtle t : Utility.getTurtlesOnGridPoint(gridPoint,getMyObserver(),"worker")){
+			if (t instanceof normaljobs.relogo.Worker)
+			result.add((normaljobs.relogo.Worker)t);
 		}
 		return result;
 		}
 		catch(SpatialException e){
-			return new AgentSet<normaljobs.relogo.UserTurtle>();
+			return new AgentSet<normaljobs.relogo.Worker>();
 		}
 	}
 
 	/**
-	 * Returns an agentset of userTurtles on a given patch.
+	 * Returns an agentset of workers on a given patch.
 	 * 
 	 * @param p
 	 *            a patch
-	 * @return agentset of userTurtles on patch p
+	 * @return agentset of workers on patch p
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public AgentSet<normaljobs.relogo.UserTurtle> userTurtlesOn(Patch p){
-		AgentSet<normaljobs.relogo.UserTurtle> result = new AgentSet<normaljobs.relogo.UserTurtle>();						
-		for (Turtle t : Utility.getTurtlesOnGridPoint(p.getGridLocation(),getMyObserver(),"userTurtle")){
-			if (t instanceof normaljobs.relogo.UserTurtle)
-			result.add((normaljobs.relogo.UserTurtle)t);
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public AgentSet<normaljobs.relogo.Worker> workersOn(Patch p){
+		AgentSet<normaljobs.relogo.Worker> result = new AgentSet<normaljobs.relogo.Worker>();						
+		for (Turtle t : Utility.getTurtlesOnGridPoint(p.getGridLocation(),getMyObserver(),"worker")){
+			if (t instanceof normaljobs.relogo.Worker)
+			result.add((normaljobs.relogo.Worker)t);
 		}
 		return result;
 	}
 
 	/**
-	 * Returns an agentset of userTurtles on the same patch as a turtle.
+	 * Returns an agentset of workers on the same patch as a turtle.
 	 * 
 	 * @param t
 	 *            a turtle
-	 * @return agentset of userTurtles on the same patch as turtle t
+	 * @return agentset of workers on the same patch as turtle t
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public AgentSet<normaljobs.relogo.UserTurtle> userTurtlesOn(Turtle t){
-		AgentSet<normaljobs.relogo.UserTurtle> result = new AgentSet<normaljobs.relogo.UserTurtle>();						
-		for (Turtle tt : Utility.getTurtlesOnGridPoint(Utility.ndPointToGridPoint(t.getTurtleLocation()),getMyObserver(),"userTurtle")){
-			if (tt instanceof normaljobs.relogo.UserTurtle)
-			result.add((normaljobs.relogo.UserTurtle)tt);
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public AgentSet<normaljobs.relogo.Worker> workersOn(Turtle t){
+		AgentSet<normaljobs.relogo.Worker> result = new AgentSet<normaljobs.relogo.Worker>();						
+		for (Turtle tt : Utility.getTurtlesOnGridPoint(Utility.ndPointToGridPoint(t.getTurtleLocation()),getMyObserver(),"worker")){
+			if (tt instanceof normaljobs.relogo.Worker)
+			result.add((normaljobs.relogo.Worker)tt);
 		}
 		return result;
 	}
 
 	/**
-	 * Returns an agentset of userTurtles on the patches in a collection or on the patches
+	 * Returns an agentset of workers on the patches in a collection or on the patches
 	 * that a collection of turtles are.
 	 * 
 	 * @param a
 	 *            a collection
-	 * @return agentset of userTurtles on the patches in collection a or on the patches
+	 * @return agentset of workers on the patches in collection a or on the patches
 	 *         that collection a turtles are
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public AgentSet<normaljobs.relogo.UserTurtle> userTurtlesOn(Collection c){
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public AgentSet<normaljobs.relogo.Worker> workersOn(Collection c){
 
 		if (c == null || c.isEmpty()){
-			return new AgentSet<normaljobs.relogo.UserTurtle>();
+			return new AgentSet<normaljobs.relogo.Worker>();
 		}
 
-		Set<normaljobs.relogo.UserTurtle> total = new HashSet<normaljobs.relogo.UserTurtle>();
+		Set<normaljobs.relogo.Worker> total = new HashSet<normaljobs.relogo.Worker>();
 		if (c.iterator().next() instanceof Turtle){
 			for (Object o : c){
 				if (o instanceof Turtle){
 					Turtle t = (Turtle) o;
-					total.addAll(userTurtlesOn(t));
+					total.addAll(workersOn(t));
 				}
 			}
 		}
@@ -164,53 +164,53 @@ public class ReLogoTurtle extends BaseTurtle{
 			for (Object o : c){
 				if (o instanceof Patch){
 					Patch p = (Patch) o;
-					total.addAll(userTurtlesOn(p));
+					total.addAll(workersOn(p));
 				}
 			}
 		}
-		return new AgentSet<normaljobs.relogo.UserTurtle>(total);
+		return new AgentSet<normaljobs.relogo.Worker>(total);
 	}
 
 	/**
-	 * Queries if object is a userTurtle.
+	 * Queries if object is a worker.
 	 * 
 	 * @param o
 	 *            an object
-	 * @return true or false based on whether the object is a userTurtle
+	 * @return true or false based on whether the object is a worker
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public boolean isUserTurtleQ(Object o){
-		return (o instanceof normaljobs.relogo.UserTurtle);
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public boolean isWorkerQ(Object o){
+		return (o instanceof normaljobs.relogo.Worker);
 	}
 
 	/**
-	 * Returns an agentset containing all userTurtles.
+	 * Returns an agentset containing all workers.
 	 * 
-	 * @return agentset of all userTurtles
+	 * @return agentset of all workers
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public AgentSet<normaljobs.relogo.UserTurtle> userTurtles(){
-		AgentSet<normaljobs.relogo.UserTurtle> a = new AgentSet<normaljobs.relogo.UserTurtle>();
-		for (Object e : this.getMyObserver().getContext().getObjects(normaljobs.relogo.UserTurtle.class)) {
-			if (e instanceof normaljobs.relogo.UserTurtle){
-				a.add((normaljobs.relogo.UserTurtle)e);
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public AgentSet<normaljobs.relogo.Worker> workers(){
+		AgentSet<normaljobs.relogo.Worker> a = new AgentSet<normaljobs.relogo.Worker>();
+		for (Object e : this.getMyObserver().getContext().getObjects(normaljobs.relogo.Worker.class)) {
+			if (e instanceof normaljobs.relogo.Worker){
+				a.add((normaljobs.relogo.Worker)e);
 			}
 		}
 		return a;
 	}
 
 	/**
-	 * Returns the userTurtle with the given who number.
+	 * Returns the worker with the given who number.
 	 * 
 	 * @param number
 	 *            a number
 	 * @return turtle number
 	 */
-	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserTurtle")
-	public normaljobs.relogo.UserTurtle userTurtle(Number number){
+	@ReLogoBuilderGeneratedFor("normaljobs.relogo.Worker")
+	public normaljobs.relogo.Worker worker(Number number){
 		Turtle turtle = Utility.turtleU(number.intValue(), getMyObserver());
-		if (turtle instanceof normaljobs.relogo.UserTurtle)
-			return (normaljobs.relogo.UserTurtle) turtle;
+		if (turtle instanceof normaljobs.relogo.Worker)
+			return (normaljobs.relogo.Worker) turtle;
 		return null;
 	}
 
@@ -547,6 +547,27 @@ public class ReLogoTurtle extends BaseTurtle{
 	@ReLogoBuilderGeneratedFor("normaljobs.relogo.UserLink")
 	public normaljobs.relogo.UserLink userLink(Turtle oneEnd, Turtle otherEnd) {
 		return userLink(oneEnd.getWho(), otherEnd.getWho());
+	}
+
+	/**
+	 * Returns the value of the global variable numWorkers.
+	 *
+	 * @return the value of the global variable numWorkers
+	 */
+	@ReLogoBuilderGeneratedFor("global: numWorkers")
+	public Object getNumWorkers(){
+		return repast.simphony.relogo.ReLogoModel.getInstance().getModelParam("numWorkers");
+	}
+
+	/**
+	 * Sets the value of the global variable numWorkers.
+	 *
+	 * @param value
+	 *            a value
+	 */
+	@ReLogoBuilderGeneratedFor("global: numWorkers")
+	public void setNumWorkers(Object value){
+		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("numWorkers",value);
 	}
 
 

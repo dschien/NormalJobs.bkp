@@ -10,6 +10,9 @@ import repast.simphony.relogo.schedule.Go;
 import repast.simphony.relogo.schedule.Setup;
 import normaljobs.ReLogoTurtle;
 
-class UserTurtle extends ReLogoTurtle{
-
+class Worker extends ReLogoTurtle{
+	
+	def step(){
+		
+	}
 }

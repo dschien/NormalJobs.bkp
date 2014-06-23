@@ -15,7 +15,7 @@ import repast.simphony.relogo.factories.TurtleFactory;
 import normaljobs.relogo.UserLink;
 import normaljobs.relogo.UserObserver;
 import normaljobs.relogo.UserPatch;
-import normaljobs.relogo.UserTurtle;
+import normaljobs.relogo.Worker;
 import normaljobs.relogo.UserGlobalsAndPanelFactory;
 
 public class SimBuilder implements ContextBuilder {
@@ -38,7 +38,7 @@ public class SimBuilder implements ContextBuilder {
 		RLWorldDimensions rLWorldDimensions = new RLWorldDimensions(minPxcor, maxPxcor, minPycor, maxPycor);
 		
 		LinkFactory lf = new LinkFactory(UserLink);
-		TurtleFactory tf = new TurtleFactory(UserTurtle);
+		TurtleFactory tf = new TurtleFactory(Worker);
 		PatchFactory pf = new PatchFactory(UserPatch);		
 		ReLogoWorldFactory wf = new ReLogoWorldFactory(context,"default_observer_context", rLWorldDimensions, tf, pf, lf);
 		
