@@ -571,24 +571,66 @@ public class ReLogoTurtle extends BaseTurtle{
 	}
 
 	/**
-	 * Returns the value of the global variable numJobs.
+	 * Returns the value of the global variable numRequirements.
 	 *
-	 * @return the value of the global variable numJobs
+	 * @return the value of the global variable numRequirements
 	 */
-	@ReLogoBuilderGeneratedFor("global: numJobs")
-	public Object getNumJobs(){
-		return repast.simphony.relogo.ReLogoModel.getInstance().getModelParam("numJobs");
+	@ReLogoBuilderGeneratedFor("global: numRequirements")
+	public Object getNumRequirements(){
+		return repast.simphony.relogo.ReLogoModel.getInstance().getModelParam("numRequirements");
 	}
 
 	/**
-	 * Sets the value of the global variable numJobs.
+	 * Sets the value of the global variable numRequirements.
 	 *
 	 * @param value
 	 *            a value
 	 */
-	@ReLogoBuilderGeneratedFor("global: numJobs")
-	public void setNumJobs(Object value){
-		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("numJobs",value);
+	@ReLogoBuilderGeneratedFor("global: numRequirements")
+	public void setNumRequirements(Object value){
+		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("numRequirements",value);
+	}
+
+	/**
+	 * Returns the value of the global variable numberSteps.
+	 *
+	 * @return the value of the global variable numberSteps
+	 */
+	@ReLogoBuilderGeneratedFor("global: numberSteps")
+	public Object getNumberSteps(){
+		return repast.simphony.relogo.ReLogoModel.getInstance().getModelParam("numberSteps");
+	}
+
+	/**
+	 * Sets the value of the global variable numberSteps.
+	 *
+	 * @param value
+	 *            a value
+	 */
+	@ReLogoBuilderGeneratedFor("global: numberSteps")
+	public void setNumberSteps(Object value){
+		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("numberSteps",value);
+	}
+
+	/**
+	 * Returns the value of the global variable workIncrement.
+	 *
+	 * @return the value of the global variable workIncrement
+	 */
+	@ReLogoBuilderGeneratedFor("global: workIncrement")
+	public Object getWorkIncrement(){
+		return repast.simphony.relogo.ReLogoModel.getInstance().getModelParam("workIncrement");
+	}
+
+	/**
+	 * Sets the value of the global variable workIncrement.
+	 *
+	 * @param value
+	 *            a value
+	 */
+	@ReLogoBuilderGeneratedFor("global: workIncrement")
+	public void setWorkIncrement(Object value){
+		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("workIncrement",value);
 	}
 
 

@@ -1,6 +1,6 @@
 package normaljobs.relogo
 
 class Job {
-	def numRequirements
-	def completionLevel = 0
+	double requirements
+	double completionLevel = 0
 }
